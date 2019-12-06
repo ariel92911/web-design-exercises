@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>圖文滿版區塊</title>
+  <!-- 改變字型 Google Fonts：https://fonts.google.com/?selection.family=Bebas+Neue -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <style>
+    /* CSS reset */
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .banner {
+      width: 100%;
+      height: 100vh;
+      background-color: #ccc;
+
+      background:
+        linear-gradient(115deg, #7bf 50%, transparent 50%) center center / 100% 100%,
+        url("https://picsum.photos/1200/600?random=10") right center / auto 100%;
+    }
+
+    .container {
+      width: 1200px;
+      height: 100%;
+      margin: auto;
+    }
+
+    .banner-txt {
+      height: 100%;
+      display: flex;
+      /* 指定flex item排列方向:垂直 */
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .banner-txt h1 {
+      font-size: 80px;
+      border-bottom: 1px solid #333;
+      font-weight: 900;
+    }
+
+    .banner-txt h1 small {
+      display: block;
+      font-size: 53px;
+      font-weight: 700;
+    }
+
+    .banner-txt h2 {
+      font-size: 50px;
+      font-weight: 700;
+    }
+
+    .banner-txt p {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="banner">
+    <div class="container">
+      <div class="banner-txt">
+        <h1>
+          金魚都能懂得
+          <small>
+            這個網頁畫面怎麼切
+          </small>
+          <h2>圖文滿版區塊</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            <br>Distinctio aperiam quam velit natus sint.</p>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
