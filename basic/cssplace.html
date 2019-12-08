@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS撰寫位置</title>
+  <style>
+    .place-2 {
+      border: 1px solid black;
+      margin-bottom: 50px;
+    }
+
+    .place-2 h1 {
+      color: blue;
+    }
+
+    .place-2 p {
+      background-color: blue;
+      color: yellow;
+    }
+  </style>
+  <link rel="stylesheet" href="place-3.css">
+</head>
+
+<body>
+
+  <div class="place-1" style="border: 1px solid black;;margin-bottom:50px;">
+    <h1 style=" color:red;">寫在起始標籤內</h1>
+    <p style="background-color: black;color:white;">
+      針對該元素要特別做設定的時候
+    </p>
+  </div>
+
+  <div class="place-2">
+    <h1>在head標籤之間插入style標籤</h1>
+    <p>通常用在單一頁面(Single Page)，如果有很多頁，那這樣要改CSS的時候，會每一頁HTML都要改
+    </p>
+  </div>
+
+  <div class="place-3">
+    <h1>另寫CSS檔案引入</h1>
+    <p>
+      這樣要改樣式時，就可以只改一個檔案就對全部頁面都有作用。
+    </p>
+  </div>
+
+</body>
+
+</html>

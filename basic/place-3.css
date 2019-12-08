@@ -1,0 +1,13 @@
+.place-3 {
+      border: 1px solid black;
+      margin-bottom: 50px;
+    }
+
+    .place-3 h1 {
+      color: green;
+    }
+
+    .place-3 p {
+      background-color: green;
+      color: black;
+    }
