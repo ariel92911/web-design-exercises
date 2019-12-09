@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Float浮動</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap-1 {
+      width: 960px;
+      background-color: wheat;
+      height: 100px;
+
+      /* 自動均分左右空間，水平置中 */
+      margin: auto;
+    }
+
+    .wrap-1 .item {
+      width: 300px;
+      height: 200px;
+      background-color: thistle;
+      margin: 0px 10px;
+      float: left;
+    }
+
+    .wrap-2 {
+      width: 960px;
+      background-color: rgb(160, 235, 172);
+      margin-top: 400px;
+
+      /* 自動均分左右空間，水平置中 */
+      margin: auto;
+    }
+
+    .wrap-2 .item {
+      width: 300px;
+      height: 200px;
+      background-color: thistle;
+      margin: 10px;
+      float: left;
+    }
+
+    .wrap-2 .clear-fix {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap-1">
+    <div class="item">
+      <h1>float</h1>
+      <p>通常用在文繞圖的時候</p>
+      <p>只能設定float: left;或float: right;</p>
+      <p>沒有float: center;</p>
+    </div>
+    <div class="item">
+      <h1>float</h1>
+      <p>原本父層的高度是由子層決定的，子層元素設定float後，因為浮起來了，所以其父層就抓不到他的高度(橘色部分)。</p>
+      <p>在此例中，父層的高度是因為我們對父層設定了高度。</p>
+    </div>
+  </div>
+
+  <div style="height: 300px;"></div>
+
+  <div class="wrap-2">
+    <div class="item">
+      <h1>解決辦法-html</h1>
+      <p>在父層的html最尾巴加入一行</p>
+      <p>(div class="clear-fix") (/div)</p>
+    </div>
+    <div class="item">
+      <h1>解決辦法-css</h1>
+      <p>css設定：clear: both;</p>
+      <p>父層就會抓到高度了</p>
+    </div>
+    <div class="clear-fix"></div>
+  </div>
+
+</body>
+
+</html>
