@@ -6,9 +6,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>inline & block & inline-block</title>
+  <style>
+    div {
+      margin: 30px;
+      padding: 10px 30px;
+      border: 1px solid black;
+    }
+
+    h1 {
+      color: red;
+
+    }
+  </style>
 </head>
 
 <body>
+  <div>
+    <h1>display：block</h1>
+    <ul>
+      <li>可以設定寬(width)、高(height)</li>
+      <li>元素佔據一整行</li>
+      <li>例子：Lorem ipsum dolor sit<a href="#"
+          style="display:block;padding:20px;background-color:rgba(255, 0, 0, 0.6);">設定display:block;
+          padding:20px;</a>Lorem
+        ipsum dolor
+        sit amet
+        consectetur
+      </li>
+
+    </ul>
+  </div>
+
+
+  <div>
+    <h1>display：inline</h1>
+    <ul>
+      <li>設定寬(width)、高(height)沒有作用</li>
+      <li>會跟其他元素排在一起</li>
+      <li>可以設定padding，但只有左右會被推開，沒辦法把元素"撐高"</li>
+      <li>例子：Lorem ipsum dolor sit<a href="#"
+          style="padding:20px;background-color:rgba(255, 0, 0, 0.6);">設定display:inline;padding:20px;</a>Lorem ipsum
+        dolor sit amet
+        consectetur
+      </li>
+    </ul>
+  </div>
+
+
+  <div>
+    <h1>display：inline-block</h1>
+    <ul>
+      <li>可以設定寬(width)、高(height)</li>
+      <li>會跟其他元素排在一起</li>
+      <li>例子：Lorem ipsum dolor sit<a href="#"
+          style="display:inline-block;padding:20px;background-color:rgba(255, 0, 0, 0.6);">設定display:inline-block;
+          padding:20px;</a>Lorem
+        ipsum dolor sit amet
+        consectetur
+      </li>
+    </ul>
+  </div>
+
 
 
 
