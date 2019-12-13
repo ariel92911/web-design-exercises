@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex 排板</title>
+  <style>
+    .wrap-1 {
+      width: 960px;
+      background-color: #ccc;
+      margin: 50px auto;
+      /* 在父層設定display: flex，子層會變flex-item */
+      display: flex;
+    }
+
+    .item {
+      /* flex-item會自動分配width */
+      width: 300px;
+      padding: 10px;
+      border: 1px solid black;
+      margin: 10px;
+      background-color: #FFFFBB;
+    }
+
+    .wrap-2 {
+      width: 960px;
+      background-color: #ccc;
+      margin: 50px auto;
+      /* 在父層設定display: flex，子層會變flex-item */
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap-1">
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+  </div>
+
+  <div class="wrap-2">
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+  </div>
+
+</body>
+
+</html>
