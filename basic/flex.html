@@ -15,9 +15,9 @@
       display: flex;
     }
 
-    .item {
-      /* flex-item會自動分配width */
-      width: 300px;
+    .wrap-1 .item {
+      /* flex-item會自動分配width，寬度設定超大也一樣均分寬度 */
+      width: 10000px;
       padding: 10px;
       border: 1px solid black;
       margin: 10px;
@@ -30,7 +30,18 @@
       margin: 50px auto;
       /* 在父層設定display: flex，子層會變flex-item */
       display: flex;
+      /* 要折行在父層設定flex-wrap: wrap; */
       flex-wrap: wrap;
+    }
+
+    .wrap-2 .item {
+      /* flex-item要折行的話width就要計算一下 */
+      width: 300px;
+      padding: 10px;
+      border: 1px solid black;
+      margin: 10px;
+      background-color: #FFFFBB;
+      box-sizing: border-box;
     }
   </style>
 </head>
@@ -38,6 +49,19 @@
 <body>
 
   <div class="wrap-1">
+    <div class="item">在父層設定display: flex，子層會變flex-item</div>
+    <div class="item">flex-item會自動分配width，並且預設等高，所以若不需要折行，寬度設定就不是很重要(不要小於均分後的寬度都可以)</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
+  </div>
+
+  <div class="wrap-1">
+    <div class="item">如果繼續增加幾個flex-item</div>
+    <div class="item">flex-item也不會折行，自動調整寬度，自動等寬</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
+      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
+      impedit aut?</div>
     <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
       laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
       impedit aut?</div>
@@ -50,12 +74,8 @@
   </div>
 
   <div class="wrap-2">
-    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
-      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
-      impedit aut?</div>
-    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
-      laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
-      impedit aut?</div>
+    <div class="item">如果想折行，可在父層設定flex-wrap: wrap;</div>
+    <div class="item">這時就要注意寬度的設定了</div>
     <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore porro accusantium
       laboriosam veniam dolorum in accusamus cum dicta, modi assumenda facere placeat maiores quasi, sint eum. Ullam,
       impedit aut?</div>
