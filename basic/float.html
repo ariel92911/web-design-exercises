@@ -57,6 +57,7 @@
   <div class="wrap-1">
     <div class="item">
       <h1>float</h1>
+      <p>在子層設定float: left;</p>
       <p>通常用在文繞圖的時候</p>
       <p>只能設定float: left;或float: right;</p>
       <p>沒有float: center;</p>
@@ -66,6 +67,8 @@
       <p>原本父層的高度是由子層決定的，子層元素設定float後，因為浮起來了，所以其父層就抓不到他的高度(橘色部分)。</p>
       <p>在此例中，父層的高度是因為我們對父層設定了高度。</p>
     </div>
+    <div class="no-clear-fix">如果沒有設定clear-fix之下個元素</div>
+
   </div>
 
   <div style="height: 300px;"></div>
@@ -81,7 +84,7 @@
       <p>css設定：clear: both;</p>
       <p>父層就會抓到高度了</p>
     </div>
-    <div class="clear-fix"></div>
+    <div class="clear-fix">我是clear-fix</div>
   </div>
 
 </body>
