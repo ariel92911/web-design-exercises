@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fixed：固定定位</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding-top: 50px;
+    }
+
+    nav {
+      background-color: #000;
+      text-align: center;
+      position: fixed;
+      /* 設定position: fixed;後，預設不會自動抓取空間寬，因為這時不知道空間有多寬，所以設定了寬度之後他就會去取得空間寬度並與空間等寬 */
+      /* 像是fixed、Absolute、float還有flex底下的element都是預設不會自動抓取空間寬的特性 */
+      width: 100%;
+      opacity: .3;
+      top: 0;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .container p {
+      margin-bottom: 2em;
+      /* 行高 */
+      line-height: 1.5;
+    }
+
+    .fixed-item {
+      position: fixed;
+      background-color: #ccc;
+      width: 600px;
+      height: 400px;
+      padding: 10px;
+      /* 透明度：1為完全不透明，0為透明 */
+      opacity: .9;
+      /* 垂直置中 */
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      /* 水平置中 */
+      left: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#">link</a>
+    <a href="#">link</a>
+    <a href="#">link</a>
+    <a href="#">link</a>
+    <a href="#">link</a>
+  </nav>
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed accusantium ea placeat vel libero eum vitae ratione
+      reprehenderit fugit. Cumque praesentium sit repellendus temporibus eaque quaerat quod numquam nihil id.</p>
+    <p>Totam sunt sit laboriosam repellat id fugiat reprehenderit repellendus cum voluptate cupiditate, nulla numquam
+      eveniet repudiandae sed pariatur consequatur rerum vitae quae amet eius saepe non earum. Quaerat, repudiandae
+      voluptas.</p>
+    <p>Debitis, porro. Eius natus nesciunt dolorem itaque quidem consectetur harum laborum, aliquam accusantium ratione
+      sit ab quae voluptate qui voluptas temporibus, cumque deleniti illum non, sapiente delectus saepe officiis et.</p>
+    <p>Libero ea temporibus consequuntur illum sequi, quas porro! Cum quisquam iste fugiat praesentium unde optio
+      suscipit
+      odio, sunt debitis possimus doloribus illum voluptatibus reiciendis inventore rerum facere nemo. At, eius?</p>
+    <p>Nulla consequuntur corrupti perferendis unde cum aperiam enim voluptates nemo ut! Inventore laudantium et
+      molestiae
+      modi blanditiis totam, asperiores officia rerum cum iste ut sapiente explicabo consequatur id molestias accusamus?
+    </p>
+    <div class="fixed-item">
+      <p>*設定固定定位的元素會從原本位置抽離出來，自己獨立一層</p>
+      <p>*常見應用如：蓋板廣告、導覽列、頁尾、固定廣告、網頁下方常見的"回到最上方"鍵</p>
+      <p>*固定定位是依據"視窗"來做定位，所以會永遠固定在視窗的固定位置(比如設定該元素離視窗top多少距離)，就算捲動也一樣</p>
+      <p>*若不設定top、bottom、left、right，他會定在原來物件距離視窗頂端及左側之預設的位置(就是原來的位置啦)</p>
+      <p>*那如果它原本的位置一開始就不在視窗可見範圍內，設定position: fixed;後，就會一直看不到他摟XD，除非把視窗放大，因為是依據"視窗"來做定位麻</p>
+    </div>
+    <p>Fugit sit praesentium quas modi minus quis, reiciendis porro distinctio adipisci, suscipit doloribus facere
+      tempora
+      numquam tempore perspiciatis omnis earum qui fugiat voluptate unde non accusamus. Possimus cumque perspiciatis
+      fugiat!</p>
+    <p>Excepturi, vitae dolor error consequuntur nemo porro. Molestiae vel expedita delectus omnis dolorem culpa atque
+      tempora obcaecati amet, ipsum dicta harum velit dolor doloremque cumque. Repellat laudantium saepe doloremque
+      consequuntur.</p>
+    <p>Consequatur dicta voluptate voluptatum voluptates inventore consequuntur pariatur obcaecati velit deserunt
+      quibusdam, dolores corrupti sit ex fuga. Doloremque at tempore, assumenda modi commodi officia harum eos
+      asperiores,
+      aliquam quaerat hic?</p>
+    <p>Assumenda, fugit vitae. Repellat vitae ad perferendis debitis consequatur id praesentium minima quis nam
+      veritatis
+      officiis, alias hic sapiente labore cum ullam iure aspernatur ipsa vel officia aliquid enim repudiandae.</p>
+    <p>Odit optio, mollitia quasi adipisci quae facilis maxime quod, ab impedit, beatae cupiditate architecto similique
+      ad
+      voluptates quas nihil soluta! Assumenda aliquid voluptatum distinctio illum veritatis, temporibus nesciunt
+      incidunt
+      voluptatibus.</p>
+    <p>Commodi iusto illum nihil aut omnis temporibus aperiam, officiis sunt optio ipsa dolore enim tenetur impedit
+      laudantium aspernatur delectus assumenda porro obcaecati dolorem doloremque, totam incidunt libero. Voluptatem,
+      incidunt quia?</p>
+    <p>Quae, enim quas placeat quasi debitis fugiat ipsum vero labore laboriosam maiores quam unde, inventore dolores!
+      Impedit officia excepturi, nostrum error accusantium quaerat voluptatem at esse blanditiis eos, accusamus quos!
+    </p>
+    <p>Nisi tenetur culpa ex quod nam vel dignissimos aspernatur aliquam natus minima maiores iure mollitia, in labore
+      similique architecto delectus dolorum magnam impedit quo nulla voluptate animi. Natus, itaque praesentium.</p>
+    <p>Non eaque eveniet corporis unde cupiditate, laudantium temporibus incidunt consequuntur laborum saepe modi
+      commodi
+      qui harum eum minima eligendi, nisi adipisci magnam a nemo. Praesentium quam cupiditate sint quidem maxime.</p>
+    <p>Rem ullam doloremque quis. Accusamus nisi esse eveniet reiciendis quaerat quos alias odit dolorem asperiores
+      delectus cupiditate assumenda voluptatum, aliquid officiis officia excepturi? Quae natus, nihil aspernatur
+      molestiae
+      hic nesciunt?</p>
+    <p>Quam iusto id perferendis, quo nihil repellat voluptatem sed ad adipisci atque inventore deserunt repudiandae
+      expedita ea sint pariatur. Laborum similique doloremque amet velit. Provident incidunt amet at dolore. Quaerat!
+    </p>
+    <p>Tenetur enim aut quos fugit nihil perspiciatis ipsa in voluptatum, facere at! Molestiae odit expedita accusamus
+      iure eligendi eius nobis aliquam, officiis quisquam nesciunt suscipit vel in dolorum nam nostrum!</p>
+    <p>Amet illo, odio magnam voluptate earum magni qui saepe corrupti tempore numquam quaerat quam consequuntur atque
+      soluta dolores hic, ipsum dolore ipsam similique esse ipsa! Tempore aut delectus vitae explicabo?</p>
+    <p>In molestiae tenetur nisi optio fuga, commodi cupiditate, unde reiciendis ab est a quibusdam sit libero pariatur
+      labore adipisci! Maiores architecto ut inventore voluptatibus voluptate aperiam error. Vitae, ipsum. Saepe!</p>
+    <p>Numquam est minima ullam, excepturi dolores inventore fuga a dolorum beatae blanditiis corporis dolore
+      praesentium
+      omnis neque sed nam eos modi molestias qui ducimus eaque rerum. Dignissimos corporis at autem!</p>
+    <p>Commodi dicta cum aliquid quia saepe optio repellat aliquam vel, ipsam enim eaque architecto similique deleniti
+      dolor eius consequatur. Dolorum distinctio eos consectetur cum asperiores illo expedita quia maxime fuga!</p>
+    <p>Ea odit dolore nisi cum dolorum? Sed a assumenda neque tenetur alias doloribus eveniet, ratione molestiae
+      recusandae quasi doloremque eligendi deleniti esse, reprehenderit explicabo blanditiis officia quos nostrum illo
+      veritatis!</p>
+    <p>Dolorem possimus veritatis quaerat ipsa deserunt. Commodi nemo magni amet ipsa voluptatem officia, reprehenderit
+      aliquid cum recusandae voluptatibus dolore impedit corporis quidem dolores, ullam maxime. Maiores doloribus
+      voluptatem perferendis iusto!</p>
+    <p>Delectus accusantium voluptates commodi nihil impedit labore voluptatibus beatae, cumque veritatis, ullam quo
+      reiciendis vero tenetur! Nisi tenetur fuga aliquam nostrum, quam veritatis ut culpa vero voluptatibus dolore
+      molestiae quidem!</p>
+    <p>Quisquam debitis culpa dolorem accusantium libero, voluptatibus iste laboriosam officia in, tenetur voluptas
+      sequi
+      eius obcaecati at totam hic saepe incidunt eligendi? Saepe maiores debitis reiciendis adipisci nisi et possimus!
+    </p>
+    <p>Veniam, nemo minus cum ipsam architecto nobis, asperiores molestias ratione accusamus sapiente eaque corrupti.
+      Eligendi qui harum quasi facilis hic placeat aliquam. Harum earum nisi quia! Dolorem soluta error nisi!</p>
+    <p>Earum quasi est blanditiis deleniti, repellendus tempore officiis accusamus fuga molestiae ex eum culpa laborum
+      non
+      exercitationem repellat veniam dolorem amet neque consectetur ratione hic ipsa dicta. Unde, reiciendis sit.</p>
+    <p>Tempore aliquam rerum ullam quos fugit incidunt, dolores obcaecati minima dolorum alias ab tenetur quasi libero,
+      vitae quaerat, error veritatis nulla delectus ducimus aperiam provident doloribus. Aperiam unde consectetur
+      impedit!
+    </p>
+    <p>Hic praesentium obcaecati, et repudiandae neque, sit, at quasi maxime deserunt excepturi ipsam quam quaerat nisi
+      non asperiores amet voluptatem distinctio alias laboriosam esse eaque! Laboriosam sint sapiente expedita
+      voluptatibus.</p>
+    <p>Velit est libero expedita culpa voluptatibus adipisci! Illo harum, natus ipsum vel quidem explicabo voluptates,
+      perspiciatis alias deleniti obcaecati delectus possimus corrupti eligendi fuga, aliquam facilis beatae placeat
+      veritatis sed.</p>
+  </div>
+
+
+</body>
+
+</html>
