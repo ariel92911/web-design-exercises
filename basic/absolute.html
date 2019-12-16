@@ -6,9 +6,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Absolute：絕對定位</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+    .wrap {
+      width: 960px;
+      display: flex;
+      margin: auto;
+    }
+
+    .item {
+      width: 250px;
+      margin: 10px;
+      border: 1px solid #aaa;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .item .pic {
+      width: 100%;
+    }
+
+    .item .pic img {
+      width: 100%;
+    }
+
+    .item .txt {
+      padding: 10px;
+    }
+
+    .item .txt h2 {
+      font-size: 24px;
+      font-weight: 700;
+      padding-bottom: 10px;
+    }
+
+    .item .txt p {
+      line-height: 1.2;
+      padding-bottom: 10px;
+    }
+
+    .item .tab {
+      background-color: #f00;
+      color: #fff;
+      padding: 6px 10px;
+      position: absolute;
+      top: -6px;
+      right: -6px;
+    }
+  </style>
 </head>
 
 <body>
+
+  <div class="wrap">
+    <div class="item">
+      <div class="tab">Hot</div>
+      <div class="pic">
+        <img src="https://picsum.photos/300/200?random=10" alt="">
+      </div>
+      <div class="txt">
+        <h2>絕對定位特性</h2>
+        <p>*物件會從原本資料位置抽掉，自己一層(跟Fixed很像)</p>
+        <p>*在還沒設定上下左右之前，會在原本所在的位置</p>
+        <p>*而原本的資料就會當作沒有這個物件</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="tab">Hot</div>
+      <div class="pic">
+        <img src="https://picsum.photos/300/200?random=11" alt="">
+      </div>
+      <div class="txt">
+        <h2>絕對定位特性</h2>
+        <p>*設定絕對定位的物件，在設定上下左右之後，他會逐層往上找有設定定位的父元素</p>
+        <p>*包括fixed、relative、absolute定位</p>
+        <p>*如果都沒有，那他會定在視窗(不是body或html)</p>
+        <p>*跟Fixed不同的是，Fixed會永遠固定在視窗中，Absolute只定位一次，所以捲動是會捲走的</p>
+        <p>*只要找到父層有做定位，他就會依據此父層做定位，定位在這父層上</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="tab">Hot</div>
+      <div class="pic">
+        <img src="https://picsum.photos/300/200?random=12" alt="">
+      </div>
+      <div class="txt">
+        <h2>絕對定位使用時機</h2>
+        <p>*當此物件不需要跟其他物件做排列的時候</p>
+        <p>*又因為設定絕對定位之後，他會自己獨立一層，所以不會影響到其他資料</p>
+        <p>*實際例子：蓋板廣告的關閉X</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="tab">Hot</div>
+      <div class="pic">
+        <img src="https://picsum.photos/300/200?random=13" alt="">
+      </div>
+      <div class="txt">
+        <h2>絕對定位使用技巧</h2>
+        <p>*當想將一物件A絕對定位在物件B上的時候</p>
+        <p>*須將物件B設定定位，但物件B又需要跟其他資料排在一起，不希望B自己獨立一層</p>
+        <p>*這時就將物件B設定position: relative;</p>
+      </div>
+    </div>
+
+
+  </div>
 
 </body>
 
