@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transition 網頁動畫</title>
+  <style>
+    .btn {
+      display: inline-block;
+      /* 文字裝飾 */
+      text-decoration: none;
+      border: 1px solid #aaa;
+      background-color: #ccc;
+      padding: 10px 15px;
+      color: black;
+
+    }
+
+    /* 可一次針對全部屬性 */
+    .btn-1 {
+      /* 動畫 */
+      /* transition: 屬性 完成時間 延遲時間 速度; */
+      transition: all 1s 0s ease;
+    }
+
+    /* 可針對特定屬性做轉換動畫就好， */
+    .btn-2 {
+      transition: background-color 1s 0s ease;
+    }
+
+    /* 不同屬性做不同的動畫安排，可多組設定，就可以控制動畫前後順序了 */
+    .btn-3 {
+      transition: background-color 1s 0s ease, padding 1s .5s;
+    }
+
+    /* 物件被摸到之後 */
+    .btn:hover {
+      padding: 10px 50px;
+      background-color: black;
+      color: #fff;
+      font-size: 42px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" class="btn btn-1">送出-1</a>
+  <a href="#" class="btn btn-2">送出-2</a>
+  <a href="#" class="btn btn-3">送出-3</a>
+
+</body>
+
+</html>
