@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animation 網頁動畫</title>
+  <style>
+    .box {
+      text-align: center;
+      line-height: 200px;
+      margin: 10px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #f00;
+      /* 在要執行動畫的物件，設定要執行的動畫腳本 */
+      /* animation: 動畫名稱 撥放時間 延遲時間 速度 次數 方向 填充模式 播放狀態; */
+      animation: shape 1s 2s 3;
+    }
+
+    .box1 {
+      text-align: center;
+      line-height: 200px;
+      margin: 10px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #ccc;
+      /* 方向：alternate (來回播放) */
+      /* 次數：infinite (無限次) */
+      animation: color 2s infinite alternate;
+    }
+
+    /* 動畫腳本 腳本名稱*/
+    @keyframes color {
+      0% {
+        background-color: #ccc;
+      }
+
+      50% {
+        background-color: green;
+      }
+
+      100% {
+        background-color: black;
+        color: white
+      }
+    }
+
+    @keyframes shape {
+      0% {
+        border-radius: 50%;
+      }
+
+      100% {
+        border-radius: 0%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Animation 動畫 比 Transition 動畫 可以控制的細節更多 -->
+  <!-- Animation 多數會搭配程式做應用 -->
+  <div class="box">執行動畫：shape</div>
+  <div class="box1">執行動畫：color</div>
+
+</body>
+
+</html>
