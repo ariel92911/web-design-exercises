@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 設定 viewport 的目的是告訴瀏覽器 viewport 的寬度以什麼為基準，以及這個寬度和 CSS 之間的比例關係。 -->
+  <!-- viewport 網頁的可視範圍 -->
+  <!-- content="width=device-width 調整內容寬度為裝置寬度 -->
+  <!-- initial-scale=1.0 設定「CSS 像素」和「裝置像素」的比例為 1:1。白話=>預設把頁面放大X倍-->
+  <!-- 以下這行要加，不然 media query 會失效 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>媒體查詢</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 100%;
+      height: 300px;
+    }
+
+    .box1 {
+      background-color: #faa;
+    }
+
+    .box2 {
+      background-color: #aaf;
+    }
+
+    /* 指定媒體類型—media types 為 screen (螢幕) */
+    /* 篩選條件—media feature 為 min-width: 768px (寬度_大於_768px的瀏覽器) */
+    /* 當條件符合時，寫在 {} 內的設定才會生效 */
+    @media screen and (min-width: 768px) {
+      .box {
+        width: 50%;
+        float: left;
+      }
+    }
+
+    @media screen and (min-width: 1400px) {
+      .box {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box box1">Media queries 是媒體類型—media types，加上篩選條件—media feature</div>
+  <div class="box box2">media types—媒體類型；media feature—篩選條件</div>
+
+</body>
+
+</html>
