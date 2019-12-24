@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RWD入門</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      width: 100%;
+      /* 一般來說會建議設定能被3.4.5.6整除的寬度，這些是網頁常出現的欄數 */
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .item {
+      background-color: #ffa;
+      margin: 0px 10px 30px;
+      padding: 10px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .wrap {
+        display: flex;
+      }
+
+      .item {
+        width: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="item">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quia mollitia aperiam sint, rem, officiis
+        eaque sed odit quidem aliquid et aliquam dolores qui magnam non laboriosam? Voluptatibus, impedit odio.</p>
+    </div>
+    <div class="item">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quia mollitia aperiam sint, rem, officiis
+        eaque sed odit quidem aliquid et aliquam dolores qui magnam non laboriosam? Voluptatibus, impedit odio.</p>
+    </div>
+    <div class="item">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsam non iure minus dolore molestiae eaque
+        doloremque omnis expedita doloribus animi, nobis atque debitis, aperiam obcaecati aliquam hic dolor asperiores!
+        Ut eius non est eos laboriosam voluptate facilis veritatis numquam iure amet eum ipsam eveniet, tenetur itaque
+        aperiam adipisci vero ipsa maxime necessitatibus hic quia expedita possimus? Molestiae, voluptas veniam!
+        Quisquam mollitia aut voluptates tempore exercitationem sequi nobis nisi? Asperiores repudiandae quasi neque
+        obcaecati animi placeat similique amet magnam maiores molestiae velit facere sapiente dicta saepe alias
+        exercitationem, ut molestias.</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
