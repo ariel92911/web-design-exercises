@@ -5,11 +5,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RWD試排版</title>
   <style>
     * {
       margin: 0;
       padding: 0;
+      list-style: none;
     }
+
+    /* 選單 */
+    #menu_control {
+      position: absolute;
+      z-index: -2;
+      /* 確保他不會出現，多設定透明 */
+      opacity: 0;
+    }
+
+    .header {
+      height: 50px;
+      background-color: #ccc;
+      position: relative;
+
+    }
+
+    .logo {
+      width: 60px;
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    .logo a {
+      display: block;
+      height: 40px;
+    }
+
+    .logo img {
+      display: block;
+      position: relative;
+      top: 5px;
+    }
+
+    .menu_btn {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+
+    .menu_btn span {
+      /* 不顯示"選單"文字的做法 */
+      /* 做法一：透明 */
+      opacity: 0;
+
+      /* 做法二：超出部份隱藏 */
+      width: 1px;
+      height: 1px;
+      display: block;
+      overflow: hidden;
+    }
+
+    .menu_btn::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      left: 2px;
+      width: 36px;
+      background-color: #777;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      /* 用陰影製造出選單漢堡的效果 */
+      /* 陰影可以多組 */
+      box-shadow: 0px 8px 0px #777,
+        0px -8px 0px #777;
+    }
+
+    nav {
+      width: 100%;
+
+      /* 視窗高 */
+      height: calc(100vh - 50px);
+      background-color: #282923;
+      position: absolute;
+      top: 50px;
+      left: -100%;
+      transition: .5s;
+    }
+
+    nav a {
+      display: block;
+      text-decoration: none;
+      color: #faa;
+      padding: 10px 20px;
+      border-bottom: 1px solid #faa;
+    }
+
+    /* 當checkbox被打勾，選取後面的元素 */
+    #menu_control:checked~.header nav {
+      left: 0;
+    }
+
+
+
+    /* 主要內容 */
 
     img {
       vertical-align: bottom;
@@ -72,6 +174,41 @@
 
 
     @media screen and (min-width: 768px) {
+      .menu_btn {
+        display: none;
+      }
+
+      .header {
+        display: flex;
+
+        /* 左右分散 */
+        justify-content: space-between;
+        background-color: #282923;
+        /* 垂直置中 */
+        align-items: center;
+      }
+
+      nav {
+        display: flex;
+        left: 0;
+        position: relative;
+        width: auto;
+        height: auto;
+        top: 0;
+
+        /* 背景顏色透明 */
+        background-color: transparent;
+      }
+
+      .logo img {
+        top: 0;
+      }
+
+      nav a {
+        border-bottom: none;
+
+      }
+
       .item-group {
         display: flex;
       }
@@ -92,14 +229,34 @@
         justify-content: center;
         padding: 0 20px;
         box-sizing: border-box;
+
       }
     }
   </style>
-  <title>RWD試排版</title>
+
 
 </head>
 
 <body>
+  <input type="checkbox" name="" id="menu_control">
+
+  <div class="header">
+    <h1 class="logo">
+      <a href="#"><img src="https://picsum.photos/60/40?random=1" alt=""></a>
+    </h1>
+    <label for="menu_control" class="menu_btn">
+      <span>選單</span>
+    </label>
+    <nav>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </nav>
+  </div>
+
 
 
   <div class="banner">
@@ -126,7 +283,6 @@
             </p>
           </div>
         </div>
-
         <div class="item">
           <div class="pic">
             <img src="https://picsum.photos/300/200?random=13" alt="">
@@ -139,7 +295,6 @@
             </p>
           </div>
         </div>
-
         <div class="item">
           <div class="pic">
             <img src="https://picsum.photos/300/200?random=14" alt="">
@@ -152,9 +307,6 @@
             </p>
           </div>
         </div>
-
-
-
       </div>
     </div>
   </div>
@@ -181,11 +333,10 @@
   <div class="about">
     <div class="wrap">
       <div class="title">
-        <h2>關於我們</h2>
+        <h2>服務項目</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia amet eaque earum, cum assumenda nostrum veniam
           aspernatur dicta enim, vel a accusantium esse ad soluta magni dignissimos possimus sint fugit?</p>
       </div>
-
       <div class="item-group">
         <div class="item">
           <div class="pic">
@@ -199,7 +350,6 @@
             </p>
           </div>
         </div>
-
         <div class="item">
           <div class="pic">
             <img src="https://picsum.photos/300/200?random=17" alt="">
@@ -212,7 +362,6 @@
             </p>
           </div>
         </div>
-
         <div class="item">
           <div class="pic">
             <img src="https://picsum.photos/300/200?random=18" alt="">
@@ -225,7 +374,6 @@
             </p>
           </div>
         </div>
-
         <div class="item">
           <div class="pic">
             <img src="https://picsum.photos/300/200?random=19" alt="">
