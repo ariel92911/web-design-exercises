@@ -90,6 +90,7 @@
       color: #fff;
       cursor: pointer;
       border-radius: 50%;
+      display: none;
     }
   </style>
 </head>
@@ -180,6 +181,14 @@
       $(".fluid-block .btn").click(function () {
         $(".fluid-block").hide();
       })
+
+
+      // 讓 btn 做滑入滑出的動作
+      // 接著過3秒後，做出淡入淡出的動作
+      //$(".fluid-block .btn").slideDown().slideUp().delay(3000).fadeIn().fadeOut();
+
+      // 讓 btn 延遲2秒後做出淡入(3秒)的動作
+      $(".fluid-block .btn").delay(3000).fadeIn(2000);
 
 
     })
