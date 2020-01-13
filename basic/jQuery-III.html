@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery 動畫</title>
+  <style>
+    .test a {
+      display: block;
+      background-color: #000;
+      color: #fff;
+      padding: 6px 10px;
+      text-decoration: none;
+      width: 300px;
+    }
+
+    .test div {
+      width: 280px;
+      padding: 20px;
+      background-color: #ccc;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- fadeIn -->
+  <div class="test">
+    <a href="#" class="fadeIn-controller"><strong>淡入 fadeIn</strong>
+    </a>
+    <div class="fadeIn-text" style="display: none;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
+      animi natus similique, est
+      dicta
+      quibusdam eos quae, iure sapiente eveniet explicabo illum deleniti voluptate debitis laudantium exercitationem
+      porro. Voluptates, aliquid?</div>
+  </div>
+
+  <!-- fadeOut -->
+  <div class="test">
+    <a href="#" class="fadeOut-controller"><strong>淡出 fadeOut</strong>
+    </a>
+    <div class="fadeOut-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor animi natus similique, est
+      dicta
+      quibusdam eos quae, iure sapiente eveniet explicabo illum deleniti voluptate debitis laudantium exercitationem
+      porro. Voluptates, aliquid?</div>
+  </div>
+
+  <!-- fadeToggle -->
+  <div class="test">
+    <a href="#" class="fadeToggle-controller"><strong>on / off fadeToggle</strong>
+    </a>
+    <div class="fadeToggle-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor animi natus similique,
+      est dicta
+      quibusdam eos quae, iure sapiente eveniet explicabo illum deleniti voluptate debitis laudantium exercitationem
+      porro. Voluptates, aliquid?</div>
+  </div>
+
+  <!-- slideUp -->
+  <div class="test">
+    <a href="#" class="slideUp-controller"><strong>收合 slideUp</strong>
+    </a>
+    <div class="slideUp-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
+      animi natus
+      similique, est dicta
+      quibusdam eos quae, iure sapiente eveniet explicabo illum deleniti voluptate debitis laudantium exercitationem
+      porro. Voluptates, aliquid?</div>
+  </div>
+
+  <!-- slideDown -->
+  <div class="test">
+    <a href="#" class="slideDown-controller"><strong>展開 slideDown</strong>
+    </a>
+    <div class="slideDown-text" style="display: none;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
+      animi natus similique,
+      est dicta
+      quibusdam eos quae, iure sapiente eveniet explicabo illum deleniti voluptate debitis laudantium exercitationem
+      porro. Voluptates, aliquid?</div>
+  </div>
+
+  <!-- slideToggle -->
+  <div class="test">
+    <a href="#" class="slideToggle-controller"><strong>on / off slideToggle</strong>
+    </a>
+    <div class="slideToggle-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor animi natus similique,
+      est dicta
+      quibusdam eos quae, iure sapiente eveniet explicabo illum deleniti voluptate debitis laudantium exercitationem
+      porro. Voluptates, aliquid?</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script>
+
+    // jquery起手式：當網頁完全載入後才可進行操作
+    $(Document).ready(function () {
+
+
+      // 動畫
+      $(".fadeIn-controller").click(function () {
+        $(".fadeIn-text").fadeIn();
+      })
+
+      $(".fadeOut-controller").click(function () {
+        $(".fadeOut-text").fadeOut();
+      })
+
+      $(".fadeToggle-controller").click(function () {
+        $(".fadeToggle-text").fadeToggle();
+      })
+
+      $(".slideUp-controller").click(function () {
+        $(".slideUp-text").slideUp();
+      })
+
+      $(".slideDown-controller").click(function () {
+        $(".slideDown-text").slideDown();
+      })
+
+      $(".slideToggle-controller").click(function () {
+        $(".slideToggle-text").slideToggle();
+      })
+
+
+    })
+
+  </script>
+</body>
+
+</html>
