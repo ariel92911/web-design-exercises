@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery CSS控制</title>
+  <style>
+    .controller {
+      display: block;
+      background-color: #000;
+      color: #fff;
+      padding: 6px 10px;
+      text-decoration: none;
+      width: 300px;
+    }
+
+    .text {
+      width: 280px;
+      padding: 20px;
+      background-color: #ccc;
+
+    }
+
+    .text.x {
+      display: none;
+    }
+
+
+    .fluid-block {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background: rgba(0, 0, 0, .5);
+    }
+
+    .fluid-block.close {
+      display: none;
+    }
+
+    .fluid-block .txt {
+      background-color: #fff;
+      width: 90%;
+      max-width: 500px;
+      height: fit-content;
+      padding: 20px;
+      position: absolute;
+
+      /* 置中 */
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      right: 0;
+      left: 0;
+    }
+
+    .fluid-block .txt .btn {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" class="controller"><strong>on / off</strong>
+  </a>
+  <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor animi natus similique, est dicta
+    quibusdam eos quae, iure sapiente eveniet explicabo illum deleniti voluptate debitis laudantium exercitationem
+    porro. Voluptates, aliquid?</div>
+
+
+  <br>
+  <a href="#" class="btn-open">open 廣告
+  </a>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis qui, quaerat nobis repellat ratione tenetur
+    veniam fugiat vero sed laboriosam harum minima, eaque accusamus voluptatum incidunt quo ullam voluptatibus pariatur
+    nihil nostrum nemo deserunt ipsam commodi? Laborum est illo a, debitis magnam natus voluptatem temporibus iure.
+    Assumenda esse quasi illo libero ipsam hic maiores nemo temporibus expedita et aliquam minus, odio adipisci fuga
+    optio, omnis consectetur eum laborum sit quas vel minima incidunt vero placeat! Voluptate alias iste dignissimos
+    delectus dolores quisquam corporis, eaque excepturi id pariatur assumenda, rem minima molestias magnam nulla tenetur
+    quia? Quibusdam tempora facilis voluptas amet.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis qui, quaerat nobis repellat ratione tenetur
+    veniam
+    fugiat vero sed laboriosam harum minima, eaque accusamus voluptatum incidunt quo ullam voluptatibus pariatur nihil
+    nostrum nemo deserunt ipsam commodi? Laborum est illo a, debitis magnam natus voluptatem temporibus iure. Assumenda
+    esse quasi illo libero ipsam hic maiores nemo temporibus expedita et aliquam minus, odio adipisci fuga optio, omnis
+    consectetur eum laborum sit quas vel minima incidunt vero placeat! Voluptate alias iste dignissimos delectus dolores
+    quisquam corporis, eaque excepturi id pariatur assumenda, rem minima molestias magnam nulla tenetur quia? Quibusdam
+    tempora facilis voluptas amet.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis qui, quaerat nobis repellat ratione tenetur
+    veniam
+    fugiat vero sed laboriosam harum minima, eaque accusamus voluptatum incidunt quo ullam voluptatibus pariatur nihil
+    nostrum nemo deserunt ipsam commodi? Laborum est illo a, debitis magnam natus voluptatem temporibus iure. Assumenda
+    esse quasi illo libero ipsam hic maiores nemo temporibus expedita et aliquam minus, odio adipisci fuga optio, omnis
+    consectetur eum laborum sit quas vel minima incidunt vero placeat! Voluptate alias iste dignissimos delectus dolores
+    quisquam corporis, eaque excepturi id pariatur assumenda, rem minima molestias magnam nulla tenetur quia? Quibusdam
+    tempora facilis voluptas amet.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis qui, quaerat nobis repellat ratione tenetur
+    veniam
+    fugiat vero sed laboriosam harum minima, eaque accusamus voluptatum incidunt quo ullam voluptatibus pariatur nihil
+    nostrum nemo deserunt ipsam commodi? Laborum est illo a, debitis magnam natus voluptatem temporibus iure. Assumenda
+    esse quasi illo libero ipsam hic maiores nemo temporibus expedita et aliquam minus, odio adipisci fuga optio, omnis
+    consectetur eum laborum sit quas vel minima incidunt vero placeat! Voluptate alias iste dignissimos delectus dolores
+    quisquam corporis, eaque excepturi id pariatur assumenda, rem minima molestias magnam nulla tenetur quia? Quibusdam
+    tempora facilis voluptas amet.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis qui, quaerat nobis repellat ratione tenetur
+    veniam
+    fugiat vero sed laboriosam harum minima, eaque accusamus voluptatum incidunt quo ullam voluptatibus pariatur nihil
+    nostrum nemo deserunt ipsam commodi? Laborum est illo a, debitis magnam natus voluptatem temporibus iure. Assumenda
+    esse quasi illo libero ipsam hic maiores nemo temporibus expedita et aliquam minus, odio adipisci fuga optio, omnis
+    consectetur eum laborum sit quas vel minima incidunt vero placeat! Voluptate alias iste dignissimos delectus dolores
+    quisquam corporis, eaque excepturi id pariatur assumenda, rem minima molestias magnam nulla tenetur quia? Quibusdam
+    tempora facilis voluptas amet.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis qui, quaerat nobis repellat ratione tenetur
+    veniam
+    fugiat vero sed laboriosam harum minima, eaque accusamus voluptatum incidunt quo ullam voluptatibus pariatur nihil
+    nostrum nemo deserunt ipsam commodi? Laborum est illo a, debitis magnam natus voluptatem temporibus iure. Assumenda
+    esse quasi illo libero ipsam hic maiores nemo temporibus expedita et aliquam minus, odio adipisci fuga optio, omnis
+    consectetur eum laborum sit quas vel minima incidunt vero placeat! Voluptate alias iste dignissimos delectus dolores
+    quisquam corporis, eaque excepturi id pariatur assumenda, rem minima molestias magnam nulla tenetur quia? Quibusdam
+    tempora facilis voluptas amet.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis qui, quaerat nobis repellat ratione tenetur
+    veniam
+    fugiat vero sed laboriosam harum minima, eaque accusamus voluptatum incidunt quo ullam voluptatibus pariatur nihil
+    nostrum nemo deserunt ipsam commodi? Laborum est illo a, debitis magnam natus voluptatem temporibus iure. Assumenda
+    esse quasi illo libero ipsam hic maiores nemo temporibus expedita et aliquam minus, odio adipisci fuga optio, omnis
+    consectetur eum laborum sit quas vel minima incidunt vero placeat! Voluptate alias iste dignissimos delectus dolores
+    quisquam corporis, eaque excepturi id pariatur assumenda, rem minima molestias magnam nulla tenetur quia? Quibusdam
+    tempora facilis voluptas amet.</p>
+
+
+  <!-- 蓋版廣告 -->
+  <div class="fluid-block">
+    <div class="txt">我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告我是廣告<div
+        class="btn">X</div>
+    </div>
+
+  </div>
+
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script>
+
+    // jquery起手式：當網頁完全載入後才可進行操作
+    $(Document).ready(function () {
+
+
+      // 另一種方式-動態添加class
+      $(".fluid-block .btn").click(function () {
+        $(".fluid-block").addClass("close");
+      })
+
+      $(".btn-open").click(function () {
+        $(".fluid-block").removeClass("close");
+      })
+
+      $(".controller").click(function () {
+        $(".text").toggleClass("x");
+      })
+
+
+    })
+
+  </script>
+</body>
+
+</html>
